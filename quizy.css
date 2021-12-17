@@ -42,6 +42,7 @@ text-align: center;
 ul{
   list-style: none;
   padding-inline-start: 0px;
+  pointer-events: auto;
 }
 
 .correctAnswer {
@@ -53,6 +54,7 @@ ul{
 .area {
   background-color: #F5F5F5;
   padding: 1px 20px;
+  display:none;
 }
 
 .titleLine::after{
@@ -71,10 +73,6 @@ ul{
   color:white
 }
 
-.incorrectAnswer2 {
-  background-color:red;
-  color:white
-}
 
 .titleLine2::after{
   content:"";
