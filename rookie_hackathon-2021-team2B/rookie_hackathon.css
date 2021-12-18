@@ -1,0 +1,134 @@
+body{
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.header {
+  margin: 0 auto;
+  width: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.main{
+  margin-left: 33%;
+  width: 1000px;
+}
+
+.header-inner {
+  background: -moz-linear-gradient(top, #48EB0F, #FFFFFF);
+  background: -webkit-linear-gradient(top, #48EB0F, #FFFFFF);
+  background-color: linear-gradient(to bottom,#48EB0F, #FFFFFF);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  width: 200px;
+  height: 55px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.global-nav {
+  padding-right: 30px;
+}
+
+.name {
+  font-size: 30px;
+  text-decoration: underline;
+  padding-top: 100px;
+  padding-bottom: 45px;
+  width: 150px;
+}
+
+.image-tomoaki {
+  height: 300px;
+  width: 470px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 8px gray;
+}
+
+.button{
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-button{
+  border: 3px solid #a9a9a9;
+  background-color: #d3d3d3;
+  width: 200px;
+  height:60px;
+}
+
+.next-button{
+  border: 3px solid #5d5fef;
+  background-color: #1e90ff;
+  width: 200px;
+  height:60px;
+}
+
+.box-name{
+  padding-left: 80px;
+  color:white;
+}
+
+.introduction{
+  background-color: #3cb371;
+  width: 470px;
+  height: 300px;
+  box-shadow: 0 0 8px gray;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.introduction-title{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  width: 100px;
+  padding-top: 45px;
+  padding-left: 30px;
+  padding-bottom: 45px;
+  margin: 0;
+  position:absolute;
+}
+
+.introduction-content{
+  margin: 0;
+  font-size:20px;
+  padding-left: 45px;
+  padding-top: 115px;
+  position: absolute;
+}
+
+ul{
+  list-style: none;
+}
+
+.button-2{
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-button-2{
+  font-size: 18px;
+  border: 3px solid #ef5da8;
+  background-color: #ee82ee;
+  width: 200px;
+  height:60px;
+}
+
+.next-button-2{
+  font-size: 18px;
+  border: 3px solid #a9a9a9;
+  background-color: #d3d3d3;
+  width: 200px;
+  height:60px;
+}
