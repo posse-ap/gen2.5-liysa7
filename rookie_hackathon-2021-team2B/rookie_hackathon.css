@@ -66,13 +66,15 @@ header {
   border: 3px solid #5d5fef;
   background-color: #1e90ff;
   width: 200px;
-  height:60px;
+  height: 60px;
+  transition: all 0.1s ease 0s;
 }
 
-.box-name{
-  padding-left: 80px;
-  color:white;
+.next-button:hover{
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  transform: translateY(-0.1875em);
 }
+
 
 .introduction{
   background-color: #3cb371;
@@ -121,8 +123,13 @@ ul{
   width: 200px;
   height:60px;
   display:none;
+  transition: all 0.1s ease 0s;
 }
 
+.back-button-2:hover{
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.25);
+  transform: translateY(-0.1875em);
+}
 .next-button-2{
   font-size: 18px;
   border: 3px solid #a9a9a9;
@@ -130,4 +137,9 @@ ul{
   width: 200px;
   height:60px;
   display:none;
+}
+
+.box-name{
+  padding-left: 80px;
+  color:white;
 }
