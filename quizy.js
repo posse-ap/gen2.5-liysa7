@@ -1,4 +1,6 @@
-let pictureAlley =[
+'use strict';
+
+let pictureArray =[
   'https://d1khcm40x1j0f.cloudfront.net/quiz/34d20397a2a506fe2c1ee636dc011a07.png',
   'https://d1khcm40x1j0f.cloudfront.net/quiz/512b8146e7661821c45dbb8fefedf731.png',
   'https://d1khcm40x1j0f.cloudfront.net/quiz/ad4f8badd896f1a9b527c530ebf8ac7f.png',
@@ -72,27 +74,54 @@ let optionTextArray = [
   
 // })
 
+// この地名はなんて読む＋画像＋選択肢+解答ボックスのるーぷ
 for (let i=0; i<10; i++){
 
 let quizDiv=`<div id="q1_${i+1}">`
 +`<h2 class="question">1.この地名は何て読む？</h2>`
 +`<div class="img">`
-+`<img src= ${pictureAlley[i]}>`
-+`</div>`
+  +`<img src= ${pictureArray[i]}>`
+  +`</div>`
 +`<ul id="cannotclick_${i+1}">`
-+`<li class="option" id="incorrect_${i+1}">${optionTextArray[i][1]}</li>`
-+`<li class="option" id="incorrect2_${i+1}">${optionTextArray[i][2]}</li>`
-+`<li class="option" id="correct_${i+1}">${optionTextArray[i][0]}</li>`
+  +`<li class="option" id="incorrect_${i+1}" onclick="check(${i},0,0)">${optionTextArray[i][1]}</li>`
+  +`<li class="option" id="incorrect2_${i+1}" onclick="check(${i},1,0)">${optionTextArray[i][2]}</li>`
+  +`<li class="option" id="correct_${i+1}" onclick="check(${i},2,0)">${optionTextArray[i][0]}</li>`
 +`</ul>`
 +`<div class="area" id="correct_area_${i+1}">`
-+`<p class="titleLine">正解！</p>`
-+`<p class="ansText">正解は「たかなわ」です！</p>`
+  +`<p class="titleLine">正解！</p>`
+  +`<p class="ansText">正解は「${optionTextArray[i][0]}」です！</p>`
 +`</div>`
 +`<div class="area" id="incorrect_area_${i+1}">`
-+`<p class="titleLine2">不正解！</p>`
-+`<p class="ansText" id="ansText">正解は「たかなわ」です！</p>`
-+`</div>`
+  +`<p class="titleLine2">不正解！</p>`
+  +`<p class="ansText" id="ansText">正解は「${optionTextArray[i][0]}」です！</p>`
+  +`</div>`
 +`</div>`
 
+ // htmlに作ったdivタグに入れる
 document.getElementById("quizDivWrapper").insertAdjacentHTML('beforeend',quizDiv);
 };
+
+
+// 選択肢に引数を与える optionNumberとanswerNumberが同じだったら正解 by momo
+var check = function(questionNumber, optionNumber, answerNumber){
+  let questionOptionNumber = document.getElementById("cannotclick_" + questionNumber + "_" + optionNumber);//クリックしたliのidを取得
+  let alwaysAnswerNumber = document.getElementById("cannotclick_"+ questionNumber + "_0");//常に正解（最初の選択肢）を取得
+  let click_invalidation = document.getElementById("cannotclick_" + questionNumber);//三つの選択肢を取得・クリック不可にするため
+
+  if (optionNumber === answerNumber) {
+
+    questionOptionNumber.classList.add("correct_area");//正解の選択肢の色を青にする
+    const correctAnswerBox = document.getElementById("correct_area" + questionNumber + "_" + optionNumber);//正解のボックスを表示（displayをnoneからblockに）
+    area.style.display = "block";
+    click_invalidation.classList.add("click_invalidation");//クリック不可
+
+} else {
+
+    questionOptionNumber.classList.add("incorrectAnswer");//不正解の選択肢を赤にする
+    alwaysAnswerNumber.classList.add("correctAnswer");//正解の選択肢を青にする
+    const incorrectAnswerBox = document.getElementById("incorrect_area" + questionNumber);//不正解のボックスを表示（displayをnoneからblockに）
+    incorrectAnswerBox.style.display = "block";
+    click_invalidation.classList.add("click_invalidation");//クリック不可
+}
+
+}
