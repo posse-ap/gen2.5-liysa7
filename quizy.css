@@ -64,10 +64,6 @@ ul{
   border-bottom: solid 3px #287DFF;
 }
 
-.pointerevent{
-  pointer-events: none;
-}
-
 .incorrectAnswer {
   background-color:red;
   color:white
@@ -79,4 +75,8 @@ ul{
   display: block;
   width: 50px;
   border-bottom: solid 3px red;
+}
+
+.click_invalidation{
+  pointer-events: none;
 }

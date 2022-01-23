@@ -26,66 +26,21 @@ let optionTextArray = [
   ['こぐれ','こしゃく','こばく'],
 ];
 
+const answerNumber=3;
 
-// // 正解の選択肢
-// document.getElementById("correct").addEventListener("click", function() {
-
-//   this.classList.add ("correctAnswer");
-//   let area= document.getElementById("correct_area");
-//   area.style.display= "block";
-
-//   // 一回クリックでロックする
-//   let nonClick = document.getElementById("cannotclick");
-//   nonClick.style.pointerEvents="none";
-// })
-
-// // 不正解の選択肢1
-// document.getElementById("incorrect").addEventListener("click",function() {
-
-//   // 不正解の選択肢を赤くする
-//   this.classList.add('incorrectAnswer');
-//   // 正解の選択肢を青くする
-//   document.getElementById("correct").classList.add('correctAnswer');
-
-//   let area= document.getElementById("incorrect_area");
-//   area.style.display= "block";
-
-
-//   // 一回クリックでロックする
-//   let nonClick = document.getElementById("cannotclick");
-//   nonClick.style.pointerEvents="none";
-  
-
-// })
-
-// // 不正解の選択肢2
-// document.getElementById("incorrect2").addEventListener("click",function() {
-//   // 不正解の選択肢を赤くする
-//   this.classList.add('incorrectAnswer');
-//     // 正解の選択肢を青くする
-//     document.getElementById("correct").classList.add('correctAnswer');
-
-//     let area= document.getElementById("incorrect_area");
-//   area.style.display= "block";
-
-//   // 一回クリックでロックする
-//   let nonClick = document.getElementById("cannotclick");
-//   nonClick.style.pointerEvents="none";
-  
-// })
 
 // この地名はなんて読む＋画像＋選択肢+解答ボックスのるーぷ
 for (let i=0; i<10; i++){
 
 let quizDiv=`<div id="q1_${i+1}">`
-+`<h2 class="question">1.この地名は何て読む？</h2>`
++`<h2 class="question">${i+1}.この地名は何て読む？</h2>`
 +`<div class="img">`
   +`<img src= ${pictureArray[i]}>`
   +`</div>`
 +`<ul id="cannotclick_${i+1}">`
-  +`<li class="option" id="incorrect_${i+1}" onclick="check(${i},0,0)">${optionTextArray[i][1]}</li>`
-  +`<li class="option" id="incorrect2_${i+1}" onclick="check(${i},1,0)">${optionTextArray[i][2]}</li>`
-  +`<li class="option" id="correct_${i+1}" onclick="check(${i},2,0)">${optionTextArray[i][0]}</li>`
+  +`<li class="option" id="option_${i+1}_1" onclick="check(${i+1},1)">${optionTextArray[i][1]}</li>`
+  +`<li class="option" id="option_${i+1}_2" onclick="check(${i+1},2)">${optionTextArray[i][2]}</li>`
+  +`<li class="option" id="option_${i+1}_3" onclick="check(${i+1},3)">${optionTextArray[i][0]}</li>`
 +`</ul>`
 +`<div class="area" id="correct_area_${i+1}">`
   +`<p class="titleLine">正解！</p>`
@@ -103,25 +58,25 @@ document.getElementById("quizDivWrapper").insertAdjacentHTML('beforeend',quizDiv
 
 
 // 選択肢に引数を与える optionNumberとanswerNumberが同じだったら正解 by momo
-var check = function(questionNumber, optionNumber, answerNumber){
-  let questionOptionNumber = document.getElementById("cannotclick_" + questionNumber + "_" + optionNumber);//クリックしたliのidを取得
-  let alwaysAnswerNumber = document.getElementById("cannotclick_"+ questionNumber + "_0");//常に正解（最初の選択肢）を取得
+var check = function(questionNumber, optionNumber){
+  let questionOptionNumber = document.getElementById("option_" + questionNumber + "_" + optionNumber);//クリックしたliのidを取得
+  let alwaysAnswerNumber = document.getElementById("option_"+ questionNumber + "_" + answerNumber);//常に正解（最初の選択肢）を取得
   let click_invalidation = document.getElementById("cannotclick_" + questionNumber);//三つの選択肢を取得・クリック不可にするため
+
+  click_invalidation.classList.add("click_invalidation");//クリック不可
 
   if (optionNumber === answerNumber) {
 
-    questionOptionNumber.classList.add("correct_area");//正解の選択肢の色を青にする
-    const correctAnswerBox = document.getElementById("correct_area" + questionNumber + "_" + optionNumber);//正解のボックスを表示（displayをnoneからblockに）
-    area.style.display = "block";
-    click_invalidation.classList.add("click_invalidation");//クリック不可
+    questionOptionNumber.classList.add("correctAnswer");//正解の選択肢の色を青にする
+    const correctAnswerBox = document.getElementById("correct_area_" + questionNumber);//正解のボックスを表示（displayをnoneからblockに）
+    correctAnswerBox.style.display = "block";
 
 } else {
 
     questionOptionNumber.classList.add("incorrectAnswer");//不正解の選択肢を赤にする
     alwaysAnswerNumber.classList.add("correctAnswer");//正解の選択肢を青にする
-    const incorrectAnswerBox = document.getElementById("incorrect_area" + questionNumber);//不正解のボックスを表示（displayをnoneからblockに）
+    const incorrectAnswerBox = document.getElementById("incorrect_area_" + questionNumber);//不正解のボックスを表示（displayをnoneからblockに）
     incorrectAnswerBox.style.display = "block";
-    click_invalidation.classList.add("click_invalidation");//クリック不可
 }
 
 }
