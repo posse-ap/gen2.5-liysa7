@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+
+.omikujiResultInner {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  line-height: 300px;
+  font-size: 100px;
+  font-weight: bold;
+  background: yellow;
+}
