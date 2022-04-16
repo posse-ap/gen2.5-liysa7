@@ -1,4 +1,294 @@
-.headerInner{
+body{
+  position: relative;
+}
+
+.header{
   height: 64px;
-  background-color: #FFFF;
+  width: 100%;
+  align-items: center;
+}
+
+.headerInner{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 64px;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+
+.headerLeft{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  height: 55px;
+}
+
+.headerWord{
+  margin: 20px;
+}
+
+.recordSpan{
+  background-color: #38C8FA;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 10px;
+}
+
+
+/* ページ内容 */
+
+.container{
+  background-color: #F5F5F8;
+  width: 100%;
+  height: 800px;
+  display: flex;
+}
+.leftbox{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightbox{
+  width: 50%;
+  display: flex;
+}
+
+.time{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  margin: 30px;
+}
+
+.timecard{
+  width:40%;
+  height:25%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.unit{
+  font-size: 20px;
+  color: #006EBB;
+  font-weight: bold;
+}
+
+.number{
+  font-size: 35px;
+  font-weight: bolder;
+  color: #666666;
+}
+
+.hour{
+  font-size: 20px;
+  font-weight: bold;
+  color: #91B6CF;
+}
+
+.graph{
+  width: 97%;
+  height: 75%;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+
+/* 右グラフ */
+
+.language{
+  width: 50%;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 25px;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+
+.contents{
+  width: 50%;
+  height: 100%;
+  background-color: #FFFFFF;
+  padding: 25px;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.timecard{
+  width: 33.333%;
+  height: 100%;
+  padding: 3%;
+  margin: 20px;
+  text-align: center;
+}
+
+.lists{
+  display:flex;
+  flex-wrap: wrap;
+  line-height: 40px;
+}
+
+.list-language-item, .list-content-item{
+  list-style: none;
+  display:flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dotJava{
+  background-color: #1754EF;
+}
+
+.dotCSS{
+  background-color: #0F71BD;
+}
+.dotPhp{
+  background-color: #20BDDE;
+
+}
+.dotHtml{
+  background-color: #3CCEFE;
+
+}
+.dotLaravel{
+  background-color: #B29EF3;
+
+}
+.dotSql{
+  background-color: #6D46EC;
+
+}
+.dotShell{
+  background-color: #4A17EF;
+
+}
+.dotInfo{
+  background-color: #3105C0;
+}
+
+.dotNyobi{
+  background-color: #1754EF;
+}
+
+.dotPosseHw{
+  background-color: #0F71BD;
+}
+
+.dotDotinstall{
+  background-color: #20BDDE;
+}
+
+.modal{
+  width: 800px;
+  height: 500px;
+  background-color: #FFFFFF;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.modal.openModal{
+  display: block;
+}
+
+.modalInner{
+  display: flex;
+}
+
+.modalRightBox{
+  width: 50%;
+}
+
+.modalLeftBox{
+  width: 50%;
+}
+
+.modalHeading{
+  font-weight: bold;
+}
+
+.studyhour{
+  background-color: #F5F5F8;
+}
+
+.commenting{
+  background-color: #F5F5F8;
+}
+
+.studyDate{
+  background-color: #F5F5F8;
+}
+
+/* モーダルチェックボタン */
+.checkList{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.checkListItem{
+ 
+}
+
+
+
+.visually-hidden{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+label{
+  padding-left: 30px;
+  position: relative;
+}
+
+label::before,
+label::after{
+  content:"";
+  display:block;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+label::before{
+  background-color: #CCCCCC;
+  border: 1px solid;
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  border-radius:50%;
+
 }
