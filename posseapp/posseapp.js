@@ -5,6 +5,26 @@ const submitBtn = document.getElementById("submit")
 const closemodal=document.getElementById("jsModalCloseBtn")
 const closeModal2=document.getElementById("jsModalCloseBtn2")
 
+const loader = document.getElementById('loader')
+const submit = document.getElementById('submit')
+const loaderInbox = document.getElementById('loaderInbox')
+
+
+// 投稿記録ボタン押したらモーダル１を消して、loader を表示
+submitBtn.addEventListener("click", function() {
+  loader.className = "loaderbox"
+  loaderInbox.className = "loader"
+  setTimeout(function(){
+    modal.classList.add("modal2");
+    loader.className = "loaderHidden"
+    loaderInbox.className = "loaderHidden"
+    tweet();
+  },5000);
+
+
+  })
+
+
 btn.addEventListener("click",function(){
   modal.classList.add("openModal")
 })
@@ -154,3 +174,23 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 window.addEventListener('resize', drawChart)
+
+
+// ツイッター投稿
+function tweet(){
+  let tweetCommenting = document.getElementById('tweetCommenting').value
+
+  let modalTweetBtn = document.getElementById('modalTweetBtn')
+
+  if(modalTweetBtn.checked){
+    window.open("https://twitter.com/intent/tweet?text=" + tweetCommenting);
+  }
+};
+
+
+
+
+
+
+// 
+flatpickr('#js-datepicker');

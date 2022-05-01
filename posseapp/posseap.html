@@ -86,7 +86,7 @@
           <div class="modalLeftBox">
             <div class="modalStudyDate">
               <h2 class="modalHeading">学習日</h2>
-              <input type="text" name="number" class="studyDate">
+              <input type="text" name="datepicker" id="js-datepicker" class="modalDate">
             </div>
             <div class="modalStudyContent">
               <h2 class="modalHeading">学習コンテンツ（複数選択可）</h2>
@@ -147,23 +147,25 @@
             <div class="modalRightBoxTop">
               <div class="modalStudyHours">
                 <h2 class="modalHeading">学習時間</h2>
-                <input type="text" name="number" class="studyhour">
+                <input type="text" name="date" class="studyhour" id="calendar">
               </div>
               <div class="modalTwitterComment">
                 <h2 class="modalHeading">Twitter用コメント</h2>
-                <textarea name="text" id="" cols="30" rows="10" class="commenting"></textarea>
+                <textarea name="text" id="tweetCommenting" cols="30" rows="10" class="commenting" ></textarea>
               </div>
             </div>
             <div class="modalRightBoxBottom">
               <div class="modalTweetInner">
-                <div class="modalTweetBtn"></div>
-                <h2 class="modalTweet">Twitterにシェアする</h2>
+                <li class="modalTweet">
+                  <input class="visually-hidden" type="checkbox" name="" id="modalTweetBtn" />
+                  <label for="modalTweetBtn">Twitterにシェアする</label>
+                </li>
               </div>
             </div>
           </div>
         </div>
         <div class="modalBottom">
-          <div id="submit" class="modalDoneBtn">
+          <div id="submit" class="modalDoneBtn" onclick="post()">
             記録・投稿
           </div>
         </div>
@@ -181,7 +183,10 @@
         </div>
       </div>
     </div>
+    <div class="loaderHidden" id="loader">
+      <div class="loaderHidden" id="loaderInbox" >Loading...</div>
     </div>
+    <!-- </div> -->
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

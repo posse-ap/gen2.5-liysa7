@@ -1,4 +1,4 @@
-body{
+body {
   position: relative;
 }
 
@@ -12,7 +12,8 @@ body{
 
 
 /* レスポンシブ */
-@media (max-width: 900px){
+@media (max-width: 900px) {
+
   /* chart */
   .chart_div {
     display: none;
@@ -25,13 +26,13 @@ body{
 
 
 /* ヘッダー */
-.header{
+.header {
   height: 64px;
   width: 100%;
   align-items: center;
 }
 
-.headerInner{
+.headerInner {
   display: flex;
   align-items: center;
   width: 100%;
@@ -42,22 +43,22 @@ body{
   background-color: #FFFFFF;
 }
 
-.headerLeft{
+.headerLeft {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo{
+.logo {
   height: 55px;
 }
 
-.headerWord{
+.headerWord {
   margin: 20px;
   color: #AAC5D8;
 }
 
-.recordSpan{
+.recordSpan {
   color: #FFFFFF;
   background: -moz-linear-gradient(left, #0F71BC, #3BCDFE);
   background: -webkit-linear-gradient(left, #0F71BC, #3BCDFE);
@@ -73,7 +74,7 @@ body{
 
 /* ページ内容 */
 
-.container{
+.container {
   background-color: #F5F5F8;
   width: 100%;
   height: 100%;
@@ -82,14 +83,14 @@ body{
   padding: 20px;
 }
 
-.topBox{
+.topBox {
   width: 100%;
   display: grid;
   gap: 20px;
   grid-template-columns: 50% 50%;
 }
 
-.bottomBox{
+.bottomBox {
   width: 100%;
   height: 5%;
   justify-items: center;
@@ -100,50 +101,50 @@ body{
 }
 
 
-.leftbox{
+.leftbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.rightbox{
+.rightbox {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 20px;
 }
 
-.time{
+.time {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.timecard{
+.timecard {
   padding: 20px 0;
   background-color: #FFFFFF;
   border-radius: 30px;
   text-align: center;
 }
 
-.unit{
+.unit {
   font-size: 20px;
   color: #006EBB;
   font-weight: bold;
 }
 
-.number{
+.number {
   font-size: 35px;
   font-weight: bolder;
   color: #666666;
 }
 
-.hour{
+.hour {
   font-size: 20px;
   font-weight: bold;
   color: #91B6CF;
 }
 
-.graph{
+.graph {
   background-color: #FFFFFF;
   border-radius: 30px;
   margin-top: 20px;
@@ -158,113 +159,120 @@ body{
   border-radius: 30px;
 }
 
-.graphBox,.BarGraphBox{
+.graphBox,
+.BarGraphBox {
   margin-top: 40px;
   border-radius: 30px;
   overflow: hidden;
 }
 
 
-.heading{
+.heading {
   font-weight: bold;
 }
 
-.samplepic{
+.samplepic {
   max-width: 100%;
   height: auto;
 }
 
-.lists{
-  display:flex;
+.lists {
+  display: flex;
   flex-wrap: wrap;
   line-height: 40px;
 }
 
-.lists2{
-  display:flex;
+.lists2 {
+  display: flex;
   flex-wrap: wrap;
   line-height: 40px;
 }
 
-.list-language-item{
+.list-language-item {
   list-style: none;
-  display:flex;
+  display: flex;
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
   vertical-align: middle;
 }
 
-.list-content-item{
+.list-content-item {
   list-style: none;
-  display:flex;
+  display: flex;
   align-items: center;
   margin-left: 5px;
   margin-right: 5px;
   vertical-align: middle;
 }
 
-.dot{
+.dot {
   height: 18px;
   width: 18px;
   border-radius: 50%;
   margin-right: 5px;
 }
 
-.dot2{
+.dot2 {
   height: 18px;
   width: 18px;
   border-radius: 50%;
   margin-right: 5px;
 }
 
-.dotJava{
+.dotJava {
   background-color: #1754EF;
 }
 
-.dotCss{
+.dotCss {
   background-color: #0F71BD;
 }
-.dotPhp{
+
+.dotPhp {
   background-color: #20BDDE;
 
 }
-.dotHtml{
+
+.dotHtml {
   background-color: #3CCEFE;
 
 }
-.dotLaravel{
+
+.dotLaravel {
   background-color: #B29EF3;
 
 }
-.dotSql{
+
+.dotSql {
   background-color: #6D46EC;
 
 }
-.dotShell{
+
+.dotShell {
   background-color: #4A17EF;
 
 }
-.dotInfo{
+
+.dotInfo {
   background-color: #3105C0;
 }
 
-.dotNyobi{
+.dotNyobi {
   background-color: #1754EF;
 }
 
-.dotPosseHw{
+.dotPosseHw {
   background-color: #0F71BD;
 }
 
-.dotDotinstall{
+.dotDotinstall {
   background-color: #20BDDE;
 }
 
 
 /* モーダルコンテンツ */
 
-.modal{
+.modal {
   width: 800px;
   height: 600px;
   background-color: #FFFFFF;
@@ -273,25 +281,25 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 20px;
 }
 
-.modal.openModal{
+.modal.openModal {
   display: block;
 }
 
-.modal.jsModalCloseBtn{
-  display:none;
+.modal.jsModalCloseBtn {
+  display: none;
 }
 
-.modalInner{
+.modalInner {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.modalTop{
+.modalTop {
   height: 5%;
   display: flex;
   justify-content: flex-end;
@@ -299,47 +307,53 @@ body{
   margin-top: 5px;
 }
 
-.modalMiddle{
+.modalMiddle {
   display: flex;
-  height:75%;
+  height: 75%;
 }
 
-.modalBottom{
+.modalBottom {
   height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modalCloseBtn{
+.modalCloseBtn {
   display: block;
   position: relative;
   width: 40px;
   height: 40px;
-  border-radius: 50%;  /* 丸みの度合い */
-  background: #F5F5F8; /* ボタンの背景色 */
+  border-radius: 50%;
+  /* 丸みの度合い */
+  background: #F5F5F8;
+  /* ボタンの背景色 */
 }
 
-.modalCloseBtn::before, .modalCloseBtn::after {
+.modalCloseBtn::before,
+.modalCloseBtn::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 2px; /* 棒の幅（太さ） */
-  height: 20px; /* 棒の高さ */
-  background: #666666; /* バツ印の色 */
+  width: 2px;
+  /* 棒の幅（太さ） */
+  height: 20px;
+  /* 棒の高さ */
+  background: #666666;
+  /* バツ印の色 */
 }
 
 .modalCloseBtn::before {
-  transform: translate(-50%,-50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .modalCloseBtn::after {
-  transform: translate(-50%,-50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 
-.modalDoneBtn{
+.modalDoneBtn {
   font-size: 20px;
   height: 50px;
   width: 430px;
@@ -356,123 +370,110 @@ body{
 }
 
 
-.modalRightBox{
+.modalRightBox {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
 
-.modalLeftBox{
+.modalLeftBox {
   width: 50%;
 }
 
-.modalRightboxTop{
+.modalRightboxTop {
   height: 95%;
   justify-content: center;
   align-items: center;
 }
 
-.modalRightboxBottom{
+.modalRightboxBottom {
   height: 5%;
   justify-content: center;
   align-items: center;
 }
 
-.modalTweet{
-  bottom:10px;
+.modalTweet {
+  bottom: 10px;
 }
 
-.modalTweetInner{
+.modalTweetInner {
   display: flex;
   align-items: center;
 }
 
-.modalTweetBtn{
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  background-color: #0F71BD;
-  position: relative;
-  margin-right: 5px;
-}
-
-.modalTweetBtn::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 8px;
-  left: 6px;
-  width: 12px;
-  height: 5px;
-  border-left: 3px solid #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
-  transform: rotate(-45deg);
+.modalTweet {
+  list-style: none;
 }
 
 
-
-.modalStudyHours{
-  padding-bottom:15px;
+.modalStudyHours {
+  padding-bottom: 15px;
   padding-top: 10px;
 }
 
-.modalTwitterComment{
+.modalTwitterComment {
   padding-bottom: 30px;
 }
 
-.modalHeading{
+.modalHeading {
   font-weight: bold;
   padding: 10px;
 }
 
-.studyhour{
+.studyhour {
   background-color: #F5F5F8;
   border: 2px solid #F5F5F8;
   border-radius: 6px;
 }
 
-.commenting{
+.commenting {
   background-color: #F5F5F8;
   border: 2px solid #F5F5F8;
   border-radius: 6px;
 }
 
-.studyDate{
+.studyDate {
   background-color: #F5F5F8;
   margin-left: 10px;
   border: 2px solid #F5F5F8;
   border-radius: 6px;
 }
 
-.modalStudyDate,.modalStudyContent,.modalStudyLang{
+.modalStudyDate,
+.modalStudyContent,
+.modalStudyLang {
   padding-top: 10px;
   padding-bottom: 20px;
 }
 
-.recordRegisterDone{
+.modalDate {
+  background-color: #F5F5F8;
+}
+
+.recordRegisterDone {
   position: absolute;
-  bottom:20px
-  
+  bottom: 20px
 }
 
 /* モーダルチェックボタン */
-.checkList{
-  display: flex;
-  flex-wrap: wrap;
-}
-.checkList2{
+.checkList {
   display: flex;
   flex-wrap: wrap;
 }
 
-.checkListItem{
+.checkList2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkListItem {
   padding: 8px;
   background-color: #F5F5F8;
   border-radius: 20px;
   margin: 5px;
 }
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -484,26 +485,26 @@ body{
   margin: -1px;
 }
 
-label{
+label {
   padding-left: 35px;
   position: relative;
 }
 
 label::before,
-label::after{
-  content:"";
-  display:block;
+label::after {
+  content: "";
+  display: block;
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
 }
 
-label::before{
+label::before {
   background-color: #CCCCCC;
   height: 25px;
   width: 25px;
   left: 5px;
-  border-radius:50%;
+  border-radius: 50%;
 }
 
 label::after {
@@ -515,13 +516,13 @@ label::after {
   left: 5px;
 }
 
-input:checked + label::after {
+input:checked+label::after {
   opacity: 1;
 }
 
 /* modal 2 */
 
-.modal2{
+.modal2 {
   width: 800px;
   height: 600px;
   background-color: #FFFFFF;
@@ -530,28 +531,28 @@ input:checked + label::after {
   top: 50%;
   left: 50%;
   display: none;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 20px;
 }
 
-.modal2.openModal{
+.modal2.openModal {
   display: block;
 }
 
-.modal2Top{
+.modal2Top {
   height: 10%;
   width: 100%;
-  display: flex; 
+  display: flex;
   justify-content: flex-end;
   padding: 30px;
 }
 
-.modal2Bottom{
+.modal2Bottom {
   height: 90%;
   width: 100%;
 }
 
-.modal2Inner{
+.modal2Inner {
   height: 300px;
   width: 300px;
   justify-content: center;
@@ -559,20 +560,20 @@ input:checked + label::after {
   background-color: #FFFFFF;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   position: absolute;
   z-index: 10;
   display: flex;
   flex-direction: column;
 }
 
-.modal2Heading{
+.modal2Heading {
   color: #BEE360;
   padding: 20px;
   font-size: 23px;
 }
 
-.modal2Check{
+.modal2Check {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -594,161 +595,251 @@ input:checked + label::after {
   transform: rotate(-45deg);
 }
 
-.modal2message{
+.modal2message {
   text-align: center;
   padding: 30px;
   font-size: 20px;
 }
 
+.loaderbox{
+width: 800px;
+height: 600px;
+background-color: #FFFFFF;
+z-index: 10;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 20px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderHidden{
+  visibility: hidden;
+}
+
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #6462ef;
+  background: -moz-linear-gradient(left, #6462ef 10%, rgba(100,98,239, 0) 42%);
+  background: -webkit-linear-gradient(left, #6462ef 10%, rgba(100,98,239, 0) 42%);
+  background: -o-linear-gradient(left, #6462ef 10%, rgba(100,98,239, 0) 42%);
+  background: -ms-linear-gradient(left, #6462ef 10%, rgba(100,98,239, 0) 42%);
+  background: linear-gradient(to right, #6462ef 10%, rgba(100,98,239, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 20;
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #6462ef;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #fafafa;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 
 /* レスポンシブ */
-@media (max-width: 900px){
+@media (max-width: 900px) {
 
-/* トップ */
-.topBox {
-  grid-template-columns: 100%;
-  gap: 16px;
+  /* トップ */
+  .topBox {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+
+  .rightbox {
+    grid-template-columns: 50% 50%;
+    gap: 16px;
+  }
+
+  .rightInner {
+    border-radius: 13px;
+  }
+
+  .headerInner {
+    padding-left: 20px;
+  }
+
+  .headerWord {
+    font-size: 10px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .recordSpan {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: 20px;
+    white-space: nowrap;
+  }
+
+  .recordRegister {
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  .timecard {
+    border-radius: 13px;
+  }
+
+  .unit,
+  .hour {
+    font-size: 15px;
+  }
+
+  .number {
+    font-size: 30px
+  }
+
+  .rightInner {
+    padding: 16px;
+  }
+
+  .graphBox {
+    margin-top: 0px;
+  }
+
+  .BarGraphBox {
+    margin-top: 16px;
+  }
+
+  .list-language-item,
+  .list-content-item {
+    font-size: 7px;
+  }
+
+  .dot,
+  .dot2 {
+    height: 10px;
+    width: 10px;
+  }
+
+  .modal {
+    bottom: 0;
+    background-color: #FFFFFF;
+  }
+
+  .modal,
+  .modal2 {
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    padding: 10px;
+  }
+
+  .modalMiddle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalLeftBox {
+    width: 100%;
+  }
+
+  .modalRightBox {
+    width: 100%;
+  }
+
+  .studyhour {
+    width: 90%;
+  }
+
+  .commenting {
+    height: 100px;
+    width: 90%;
+  }
+
+  .modalBottom {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .modalDoneBtn {
+    width: 365px;
+  }
+
+  .checkListItem {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .modalStudyDate,
+  .modalStudyContent,
+  .modalStudyLang {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .modalStudyHours {
+    padding-bottom: 10px;
+    padding-top: 0px;
+  }
+
+  .modalTwitterComment {
+    padding-bottom: 10px;
+  }
+
 }
 
-.rightbox{
-  grid-template-columns: 50% 50%;
-  gap: 16px;
-}
-
-.rightInner{
-  border-radius: 13px;
-}
-
-.headerInner{
-  padding-left: 20px;
-}
-
-.headerWord{
-  font-size: 10px;
-}
-
-.logo {
-  height: 30px;
-}
-
-.recordSpan {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding-left:80px;
-  padding-right: 80px;
-  margin: 20px;
-  white-space: nowrap;
-}
-
-.recordRegister{
-  justify-content: center;
-  text-align: center;
-}
-
-
-.timecard{
-  border-radius: 13px;
-}
-
-.unit,.hour{
-  font-size: 15px;
-}
-
-.number{
-  font-size: 30px
-}
-
-.rightInner{
-  padding: 16px;
-}
-
-.graphBox{
-  margin-top: 0px;
-}
-
-.BarGraphBox{
-  margin-top: 16px;
-}
-
-.list-language-item,.list-content-item{
-  font-size: 7px;
-}
-
-.dot,.dot2{
-  height:10px;
-  width: 10px;
-}
-
-.modal{
-  bottom: 0;
-  background-color: #FFFFFF;
-}
-
-.modal,.modal2{
-  max-width: 100%;
-  height: auto;
-  position: fixed;
-  top: 10%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: none;
-  padding: 10px;
-}
-
-.modalMiddle{
-  display: flex;
-  flex-direction: column;
-}
-
-.modalLeftBox{
-  width: 100%;
-}
-
-.modalRightBox{
-  width: 100%;
-}
-
-.studyhour{
-  width: 90%;
-}
-.commenting{
-  height: 100px;
-  width: 90%;
-}
-
-.modalBottom{
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0;
-}
-
-.modalDoneBtn{
-  width: 365px;
-}
-
-.checkListItem{
-  font-size: 14px;
-  padding: 5px;
-}
-
-.modalStudyDate, .modalStudyContent, .modalStudyLang {
-  padding-top: 0px;
-  padding-bottom: 10px;
-}
-
-.modalStudyHours {
-  padding-bottom: 10px;
-  padding-top: 0px;
-}
-
-.modalTwitterComment {
-  padding-bottom: 10px;
-}
-
-
-
-}
