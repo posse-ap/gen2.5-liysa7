@@ -1,0 +1,152 @@
+
+body{
+  margin: 0 auto;
+}
+
+.container{
+  padding-left: 25%;
+  padding-right: 25%;
+
+}
+
+header{
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.headerInner{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.kuizy{
+  color: #25ABD8;
+  font-size: 35px;
+  font-weight: bold;
+  padding-left: 30%;
+}
+
+.btns{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-right: 20%;
+}
+
+.quizBtn{
+  font-size: 12px;
+  color: #F5F5F5;
+  background-color: #287DFF;
+  height: 25px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-radius: 5px;
+  padding-top: 10px; 
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.searchBtn{
+  background-color: gainsboro;
+  border-radius: 5px;
+  height: 25px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+
+.title{
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.question {
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+.question::after{
+  position: absolute;
+  content:"";
+  display: block;
+  width: 120px;
+  border-bottom: solid 2px #00AB36;
+  margin-top: 7px;
+}
+
+
+.option {
+  font-size: 20px;
+  border: 1px solid #ebebeb;
+  height: 40px;
+  margin: 10px;
+  padding-left: 5px;
+  padding-top: 15px;
+  box-shadow: 0 3px 3px -3px rgb(0,0,0, 13%);
+  font-family:  "Hiragino Kaku Gothic ProN", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "游ゴシック Medium", meiryo, sans-serif;
+}
+
+.img {
+text-align: center;
+}
+
+ul{
+  list-style: none;
+  padding-inline-start: 0px;
+  pointer-events: auto;
+}
+
+.correctAnswer {
+  background-color:#287DFF;
+  color: white;
+
+}
+
+.area {
+  background-color: #F5F5F5;
+  padding:20px;
+  display:none;
+  
+}
+
+.titleLine,.titleLine2{
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.ansText{
+  padding-left: 10px;
+}
+
+.titleLine::after{
+  content:"";
+  display: block;
+  width: 50px;
+  border-bottom: solid 3px #287DFF;
+}
+
+.incorrectAnswer {
+  background-color:red;
+  color:white
+}
+
+
+.titleLine2::after{
+  content:"";
+  display: block;
+  width: 50px;
+  border-bottom: solid 3px red;
+}
+
+.click_invalidation{
+  pointer-events: none;
+}
