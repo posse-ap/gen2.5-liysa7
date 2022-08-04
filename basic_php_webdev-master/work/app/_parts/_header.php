@@ -1,3 +1,8 @@
+<?php
+
+$color = $_SESSOPN['color']?? "transparent";
+
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -5,4 +10,4 @@
   <meta charset="utf-8">
   <title>PHP Practice</title>
 </head>
-<body>
+<body style="background-color:<?= h($color); ?>;">
