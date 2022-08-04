@@ -1,14 +1,15 @@
 <?php
 
-  require('../app/functions.php'); /*読み込みに失敗したときに止めてほしいからrequire */
+  require('../app/functions.php'); 
+   /*読み込みに失敗したときに止めてほしいからrequire */
   
-  $message = trim(filter_input(INPUT_GET, 'message'));
-  $message = $message !== '' ? $message : '...';
+  $colors = filter_input(INPUT_GET, 'colors', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+  $colors = empty($colors) ? 'None Selected' :implode(',',$colors);
 
   include('../app/_parts/_header.php');
 ?>
 
-<p><?= h($message); ?></p>
+<p><?= nl2br(h($colors)); ?></p>
 <p><a href="index.php">Go back</a></p>
 
 <?php

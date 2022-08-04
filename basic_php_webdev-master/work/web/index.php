@@ -6,7 +6,11 @@
 ?>
 
 <form action ="result.php" method ="get">
-  <input type="text" name="message">
+  <select name="colors[]" multiple>
+    <option value="orange">Orange</option>
+    <option value="pink">Pink</option>
+    <option value="gold">Gold</option>
+  </select>
   <button>Send</button>
 </form>
 
